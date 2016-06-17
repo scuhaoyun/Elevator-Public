@@ -11,10 +11,17 @@ class AlertRecordViewController:UIViewController,HYBottomToolBarButtonClickDeleg
     @IBOutlet weak var topBarView: UIView!
     @IBOutlet weak var bottomBarView: UIView!
     @IBOutlet weak var tableview: UITableView!
+    var alertRecordData:[AlertRecord] = [] {
+        didSet {
+            tableview.reloadData()
+        }
+    }
     override func viewDidLoad() {
          super.viewDidLoad()
          tableview.delegate = self
         tableview.dataSource = self
+        //tableview.estimatedRowHeight = 53
+        alertRecordData = AlertRecord.selectAll()
         loadToolBar()
     }
     /**
@@ -23,8 +30,6 @@ class AlertRecordViewController:UIViewController,HYBottomToolBarButtonClickDeleg
     func toolBarButtonClicked(sender: UIButton) {
         switch sender.currentTitle! {
         case "返回" :
-            break
-        case "筛选":filterBtnOnToolBarClick()
             break
         case "全选" :selectBtnOnToolBarClick(sender)
             break
@@ -36,26 +41,31 @@ class AlertRecordViewController:UIViewController,HYBottomToolBarButtonClickDeleg
         default:  fatalError("HYBottomToolBarButtonClickDelegate method go error!")
         }
     }
-    func RecordCellBtnClick(cell: UITableViewCell, clickBtn: UIButton) {
-    }
-    //SwiftAlertViewDelegate协议方法
-    func alertView(alertView: SwiftAlertView, clickedButtonAtIndex buttonIndex: Int){
-    }
-    
     /**
      *tableView所需实现的协议方法
      */
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return alertRecordData.count
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 50
+        return 53
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let identifier   = "AlertRecordCell"
+        var cell         = tableview.dequeueReusableCellWithIdentifier(identifier)
+        if cell == nil {
+            var array        = NSBundle.mainBundle().loadNibNamed("AlertRecordCell", owner: self, options: nil)
+            let newCell      = array[0] as! AlertRecordCell
+            newCell.alertRecord = alertRecordData[indexPath.row]
+            cell             = newCell
+        }
+        return cell!
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-      
+        let alertStoryBoard = UIStoryboard(name:"Alert", bundle: nil)
+        let alertViewController = alertStoryBoard.instantiateViewControllerWithIdentifier("AlertShowViewController") as! AlertShowViewController
+        alertViewController.alertRecord = (tableView.cellForRowAtIndexPath(indexPath) as! AlertRecordCell).alertRecord
+        self.showViewController(alertViewController, sender: self)
     }
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         cell.separatorInset = UIEdgeInsetsZero
@@ -72,7 +82,7 @@ class AlertRecordViewController:UIViewController,HYBottomToolBarButtonClickDeleg
         newToolBar.frame.size    = topBarView.frame.size
         newToolBar.frame.origin  = CGPoint(x: 0, y: 0)
         newToolBar.firstButton.setTitle("返回", forState: UIControlState.Normal)
-        newToolBar.secondButton.setTitle("筛选", forState: UIControlState.Normal)
+        newToolBar.secondButton.hidden = true
         topBarView.addSubview(newToolBar)
         
         var array1               = NSBundle.mainBundle().loadNibNamed("HYBottomToolBar", owner: self, options: nil) as! [HYBottomToolBar]
@@ -86,9 +96,41 @@ class AlertRecordViewController:UIViewController,HYBottomToolBarButtonClickDeleg
         print(self.view.frame)
         bottomBarView.addSubview(newToolBar1)
     }
-    func filterBtnOnToolBarClick() {
-    }
+    
     func removeBtnOnToolBarClick() {
+        let alertController = UIAlertController(title: "温馨提示", message: "确定删除吗？", preferredStyle: UIAlertControllerStyle.Alert)
+        let okAction = UIAlertAction(title: "确认", style: UIAlertActionStyle.Default, handler:{
+            (action: UIAlertAction!) -> Void in
+            var isAllSuccess = true
+            var haveSelected = false
+            for cell in self.tableview.visibleCells {
+                let alertCell = cell  as! AlertRecordCell
+                if alertCell.checkboxIsSelected {
+                    haveSelected = true
+                    let record = self.alertRecordData[self.tableview.indexPathForCell(alertCell)!.row]
+                    if !record.deleteFromDb() {
+                        isAllSuccess = false
+                    }
+                }
+            }
+            if haveSelected {
+                if isAllSuccess {
+                    HYProgress.showSuccessWithStatus("删除成功！")
+                }
+                else {
+                    HYProgress.showErrorWithStatus("操作失败！")
+                }
+                self.alertRecordData = AlertRecord.selectAll()
+            }
+            else {
+                HYProgress.showErrorWithStatus("未选择删除对象！")
+            }
+            
+        })
+        let cancelAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel, handler: nil)
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
     func selectBtnOnToolBarClick(sender: UIButton) {
         var isSelect = false
@@ -101,8 +143,8 @@ class AlertRecordViewController:UIViewController,HYBottomToolBarButtonClickDeleg
                 sender.setTitle("全选", forState: UIControlState.Normal)
             }
             for cell in tableview.visibleCells {
-                let queryCell = cell  as! QueryRecordCell
-                queryCell.checkboxIsSelected = isSelect
+                let alertCell = cell  as! AlertRecordCell
+                alertCell.checkboxIsSelected = isSelect
             }
             
         }

@@ -96,6 +96,12 @@
 		68A018DF1C3A5A880081AA01 /* tool_barcode.png in Resources */ = {isa = PBXBuildFile; fileRef = 68A018DE1C3A5A880081AA01 /* tool_barcode.png */; };
 		68A018E61C3A70140081AA01 /* AJDropDownPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A018E51C3A70140081AA01 /* AJDropDownPicker.m */; };
 		68A018EA1C3A810F0081AA01 /* picture.png in Resources */ = {isa = PBXBuildFile; fileRef = 68A018E91C3A810F0081AA01 /* picture.png */; };
+		68A29FEF1D14079D00B9EF81 /* AlertShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A29FEE1D14079D00B9EF81 /* AlertShowViewController.swift */; };
+		68A29FF11D140A3800B9EF81 /* AlertRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A29FF01D140A3800B9EF81 /* AlertRecord.swift */; };
+		68A29FF31D140BDB00B9EF81 /* HYDbAlertRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A29FF21D140BDB00B9EF81 /* HYDbAlertRecord.swift */; };
+		68A29FF51D1412E400B9EF81 /* UIViewController-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A29FF41D1412E400B9EF81 /* UIViewController-extension.swift */; };
+		68A29FF71D141FCE00B9EF81 /* AlertRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68A29FF61D141FCE00B9EF81 /* AlertRecordCell.xib */; };
+		68A29FF91D14200000B9EF81 /* AlertRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A29FF81D14200000B9EF81 /* AlertRecordCell.swift */; };
 		68A600FB1C39077300C09A82 /* drop_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 68A600F81C39077300C09A82 /* drop_arrow.png */; };
 		68A600FC1C39077300C09A82 /* THComboBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A600FA1C39077300C09A82 /* THComboBox.m */; };
 		68ADB5D91C3BBC9C00EF2AE9 /* Query.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68ADB5D81C3BBC9C00EF2AE9 /* Query.storyboard */; };
@@ -241,6 +247,12 @@
 		68A018E41C3A70140081AA01 /* AJDropDownPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJDropDownPicker.h; sourceTree = "<group>"; };
 		68A018E51C3A70140081AA01 /* AJDropDownPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJDropDownPicker.m; sourceTree = "<group>"; };
 		68A018E91C3A810F0081AA01 /* picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picture.png; sourceTree = "<group>"; };
+		68A29FEE1D14079D00B9EF81 /* AlertShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertShowViewController.swift; sourceTree = "<group>"; };
+		68A29FF01D140A3800B9EF81 /* AlertRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertRecord.swift; sourceTree = "<group>"; };
+		68A29FF21D140BDB00B9EF81 /* HYDbAlertRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYDbAlertRecord.swift; sourceTree = "<group>"; };
+		68A29FF41D1412E400B9EF81 /* UIViewController-extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController-extension.swift"; sourceTree = "<group>"; };
+		68A29FF61D141FCE00B9EF81 /* AlertRecordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertRecordCell.xib; sourceTree = "<group>"; };
+		68A29FF81D14200000B9EF81 /* AlertRecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertRecordCell.swift; sourceTree = "<group>"; };
 		68A600F71C39077200C09A82 /* Elevator-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Elevator-Bridging-Header.h"; sourceTree = "<group>"; };
 		68A600F81C39077300C09A82 /* drop_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drop_arrow.png; sourceTree = "<group>"; };
 		68A600F91C39077300C09A82 /* THComboBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THComboBox.h; sourceTree = "<group>"; };
@@ -313,6 +325,10 @@
 			children = (
 				680AAA7C1CEB56A5003C4514 /* AlertRecordViewController.swift */,
 				68AE54191CEC838B00526CC3 /* UrgencyAlertViewController.swift */,
+				68A29FEE1D14079D00B9EF81 /* AlertShowViewController.swift */,
+				68A29FF01D140A3800B9EF81 /* AlertRecord.swift */,
+				68A29FF61D141FCE00B9EF81 /* AlertRecordCell.xib */,
+				68A29FF81D14200000B9EF81 /* AlertRecordCell.swift */,
 			);
 			name = Alert;
 			sourceTree = "<group>";
@@ -619,6 +635,7 @@
 			isa = PBXGroup;
 			children = (
 				685D303D1C421D5D00C09048 /* HYDbQueryRecord.swift */,
+				68A29FF21D140BDB00B9EF81 /* HYDbAlertRecord.swift */,
 				68052BC41C98065600E68799 /* HYDbLocation.swift */,
 				6861EA441CB6819B007D5B4A /* HYDbAutoTextField.swift */,
 			);
@@ -729,6 +746,7 @@
 				6834E10C1C3FAF7B007B8874 /* ReachabilitySwift-extension.swift */,
 				685BEC521C40DF430072E3C9 /* String-extension.swift */,
 				685D30441C426FE500C09048 /* UIView-extension.swift */,
+				68A29FF41D1412E400B9EF81 /* UIViewController-extension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -906,6 +924,7 @@
 				68748FF51C32BB890050A1FC /* QueryRecordCellEditView.xib in Resources */,
 				68A018DF1C3A5A880081AA01 /* tool_barcode.png in Resources */,
 				680AAA781CEB50FC003C4514 /* mainbkg.png in Resources */,
+				68A29FF71D141FCE00B9EF81 /* AlertRecordCell.xib in Resources */,
 				684943DD1C30102E00EB5AB7 /* HYBottomButton.png in Resources */,
 				685F73711C33C71900E80F33 /* bottom_button_disable.png in Resources */,
 				685BEC641C41440F0072E3C9 /* radio-select.png in Resources */,
@@ -1003,6 +1022,7 @@
 			files = (
 				68ADB5E11C3BD6B500EF2AE9 /* QueryElevatorInfoViewController.swift in Sources */,
 				68624C401C4A82EC00962F46 /* ALImageCell.swift in Sources */,
+				68A29FF31D140BDB00B9EF81 /* HYDbAlertRecord.swift in Sources */,
 				685BEC531C40DF430072E3C9 /* String-extension.swift in Sources */,
 				684943DF1C301C8700EB5AB7 /* MainViewController.swift in Sources */,
 				68CDC4D31C3E75DB00B55DFF /* moduleTypeAlias.swift in Sources */,
@@ -1027,6 +1047,7 @@
 				685D303E1C421D5D00C09048 /* HYDbQueryRecord.swift in Sources */,
 				68EACC421CBBCDE800F9A97E /* LBXScanWrapper.swift in Sources */,
 				68624C551C4A830C00962F46 /* ALImageExtensions.swift in Sources */,
+				68A29FF51D1412E400B9EF81 /* UIViewController-extension.swift in Sources */,
 				685BEC571C40FCC30072E3C9 /* MaintainInfo.swift in Sources */,
 				68033ED31C884B8900B3E857 /* AdressAndBuildingNameSearchView.swift in Sources */,
 				684C1F441C2EAF770078ACCD /* HYBottomToolBar.swift in Sources */,
@@ -1037,6 +1058,7 @@
 				689F594F1CEC01F000877322 /* MenuViewController.swift in Sources */,
 				6834E10F1C3FB1D6007B8874 /* HYNetwork.swift in Sources */,
 				685F737D1C33F1F400E80F33 /* QueryRecordFilterView.swift in Sources */,
+				68A29FF11D140A3800B9EF81 /* AlertRecord.swift in Sources */,
 				68EACC3E1CBBCDE800F9A97E /* LBXScanNetAnimation.swift in Sources */,
 				68624C4A1C4A82FC00962F46 /* ALImagePickerViewDelegate.swift in Sources */,
 				68624C411C4A82EC00962F46 /* ALPermissionsView.swift in Sources */,
@@ -1047,6 +1069,7 @@
 				68ADB5DF1C3BC10000EF2AE9 /* QueryInfoViewController.swift in Sources */,
 				68624C521C4A830C00962F46 /* ALImageFetchingInteractor.swift in Sources */,
 				685D30451C426FE500C09048 /* UIView-extension.swift in Sources */,
+				68A29FF91D14200000B9EF81 /* AlertRecordCell.swift in Sources */,
 				68624C4C1C4A82FC00962F46 /* ALConfirmViewController.swift in Sources */,
 				68624C421C4A82EC00962F46 /* ALCameraView.swift in Sources */,
 				68624C361C4A820100962F46 /* QRScanViewController.swift in Sources */,
@@ -1057,6 +1080,7 @@
 				686EAB9F1C2BEC0600AB3558 /* AppDelegate.swift in Sources */,
 				68D97B541C3D2AB900990AD6 /* JLToast-Extension.swift in Sources */,
 				68624C531C4A830C00962F46 /* ALUtilities.swift in Sources */,
+				68A29FEF1D14079D00B9EF81 /* AlertShowViewController.swift in Sources */,
 				685BEC5F1C4122F00072E3C9 /* QueryEvalutationInfoViewController.swift in Sources */,
 				680FB9311C46516D008A21C2 /* HYHandler.swift in Sources */,
 				68624C431C4A82EC00962F46 /* ALCropOverlay.swift in Sources */,

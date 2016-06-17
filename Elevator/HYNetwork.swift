@@ -10,7 +10,9 @@ import Foundation
 import NetworkExtension
 import SystemConfiguration
 class HYNetwork: NSObject {
-   
+    class func isConnectToNetwork() -> Bool {
+        return isConnectToNetwork(UIViewController.getCurruntVC())
+    }
     class func isConnectToNetwork(viewcontroller: UIViewController) -> Bool {
         var reachability:HYReachability?
         do {

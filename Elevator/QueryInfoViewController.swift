@@ -41,6 +41,9 @@ class QueryInfoViewController : UIViewController,HYBottomToolBarButtonClickDeleg
     @IBAction func alertBtnClick(sender: UIButton) {
         let alertSB = UIStoryboard(name: "Alert", bundle: nil)
         let urgenceAlertVC = alertSB.instantiateViewControllerWithIdentifier("UrgencyAlertViewController") as! UrgencyAlertViewController
+        let alertRecord = AlertRecord()
+        alertRecord.twoCodeId = self.qrcodeTitle ?? ""
+        urgenceAlertVC.alertRecord = alertRecord
         self.presentViewController(urgenceAlertVC, animated: true, completion: nil)
     }
     /**

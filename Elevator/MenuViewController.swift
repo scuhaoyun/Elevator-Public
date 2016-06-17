@@ -16,6 +16,7 @@ class MenuViewController:UIViewController, UITableViewDataSource,UITableViewDele
         tableview.dataSource = self
         tableview.tableFooterView = UIView()
         tableview.separatorInset = UIEdgeInsetsZero
+        tableview.layoutMargins = UIEdgeInsetsZero
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
@@ -30,14 +31,32 @@ class MenuViewController:UIViewController, UITableViewDataSource,UITableViewDele
             default: text = ""
         }
         cell.textLabel?.text = text
-        cell.backgroundColor = UIColor.grayColor()
+        cell.textLabel?.font = UIFont.systemFontOfSize(17)
+        //cell.backgroundColor = UIColor.grayColor()
         cell.separatorInset = UIEdgeInsetsZero
         return cell
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        var title = ""
+        var message = ""
+        switch indexPath.row {
+            case 0: title = "服务器地址设置"; message = "暂时不支持服务器设置，请关注后续更新"
+            case 1: title = "关于"; message = "电梯安全公共服务平台公众版    版本号:1.5"
+            case 2: title = "帮助"; message = "有任何问题可关注我们的官方网站及问题反馈"
+            default: break
+        }
+
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let okAction = UIAlertAction(title: "确认", style: UIAlertActionStyle.Cancel, handler:nil)
+        alertController.addAction(okAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
     @IBAction func backBtnClick(sender: UIButton) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.separatorInset = UIEdgeInsetsZero
+        cell.layoutMargins = UIEdgeInsetsZero
+    }
+
 }

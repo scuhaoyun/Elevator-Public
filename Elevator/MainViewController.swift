@@ -59,7 +59,6 @@ class MainViewController : UIViewController {
     }
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
         if motion == UIEventSubtype.MotionShake {
-            print("Shaked!")
             if HYNetwork.isWifiOpen(){
                 let macAddress = HYNetwork.getMacForWifiName("CCDT")
                 if let mac = macAddress {

@@ -46,8 +46,8 @@
                         <nil key="highlightedColor"/>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="e1c-q1-aKw"/>
                                 <exclude reference="QLW-v4-8Hc"/>
+                                <exclude reference="e1c-q1-aKw"/>
                             </mask>
                         </variation>
                     </label>

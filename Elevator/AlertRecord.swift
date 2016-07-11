@@ -35,16 +35,15 @@ class AlertRecord {
     static func select(address:String) -> [AlertRecord] {
         return HYDbAlertRecord().getAlertRecordForAddress(address)
     }
-    func submit()-> (Bool,String) {
-        var isSuccess = false
-        var info = "报警失败！"
+    func submit(){
         if HYNetwork.isConnectToNetwork() {
+            var isSuccess = false
             let image = HYImage.shareInstance.getImageForName(self.imgName)
             let imgStr:String = HYImage.get64encodingStr(image)
             let fileLen = imgStr.characters.count
             
             guard imgStr != ""  else {
-                return (isSuccess,info)
+                return
             }
             HYProgress.showWithStatus("正在报警，请稍后！")
             Alamofire.request(.POST, URLStrings.remarkAddMobile, parameters: [
@@ -55,14 +54,18 @@ class AlertRecord {
                     HYProgress.dismiss()
                     if let backStr = response.result.value {
                         if backStr != "" && backStr != "0" {
-                            self.address = backStr
                             isSuccess = true
-                            info = "报警成功!"
+                            self.address = backStr
+                            HYProgress.showSuccessWithStatus("报警成功!")
+                            self.insertToDb()
                         }
                     }
             }
+            if !isSuccess {
+                HYProgress.showSuccessWithStatus("报警失败!")
+            }
         }
-        return (isSuccess,info)
+        
     }
 
 }

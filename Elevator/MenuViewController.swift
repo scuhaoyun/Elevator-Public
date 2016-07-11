@@ -40,8 +40,11 @@ class MenuViewController:UIViewController, UITableViewDataSource,UITableViewDele
         var title = ""
         var message = ""
         switch indexPath.row {
-            case 0: title = "服务器地址设置"; message = "暂时不支持服务器设置，请关注后续更新"
-            case 1: title = "关于"; message = "电梯安全公共服务平台公众版    版本号:1.5"
+            case 0:
+                let menuStoryBoard = UIStoryboard(name:"Menu", bundle: nil)
+                let setupViewController = menuStoryBoard.instantiateViewControllerWithIdentifier("SetupViewController") as! SetupViewController
+                self.showViewController(setupViewController, sender: self)
+            case 1: title = "关于"; message = "电梯安全公共服务平台公众版    版本号:1.1"
             case 2: title = "帮助"; message = "有任何问题可关注我们的官方网站及问题反馈"
             default: break
         }

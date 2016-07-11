@@ -17,4 +17,6 @@ extension DefaultsKeys {
     static let allCheckTaskNum = DefaultsKey<Array<String>?>("allCheckTaskNum")
     static let iMSI = DefaultsKey<String?>("iMSI")
     static let iMEI = DefaultsKey<String?>("iMEI")
+    static let  applicationAddress = DefaultsKey<String?>("applicationAddress")
+    static let  applicationPort = DefaultsKey<String?>("applicationPort")
 }

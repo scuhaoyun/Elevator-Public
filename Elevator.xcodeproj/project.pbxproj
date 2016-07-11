@@ -20,6 +20,7 @@
 		680FB92F1C4641C8008A21C2 /* operation_bt_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 680FB92E1C4641C8008A21C2 /* operation_bt_off.png */; };
 		680FB9311C46516D008A21C2 /* HYHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680FB9301C46516D008A21C2 /* HYHandler.swift */; };
 		680FB9331C4661CF008A21C2 /* QueryManualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680FB9321C4661CF008A21C2 /* QueryManualViewController.swift */; };
+		68124A5A1D33D2E600443408 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68124A591D33D2E600443408 /* SetupViewController.swift */; };
 		6815737A1C49139E00EDB98A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681573791C49139E00EDB98A /* Location.swift */; };
 		6834E10D1C3FAF7B007B8874 /* ReachabilitySwift-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6834E10C1C3FAF7B007B8874 /* ReachabilitySwift-extension.swift */; };
 		6834E10F1C3FB1D6007B8874 /* HYNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6834E10E1C3FB1D6007B8874 /* HYNetwork.swift */; };
@@ -47,7 +48,6 @@
 		685D30451C426FE500C09048 /* UIView-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685D30441C426FE500C09048 /* UIView-extension.swift */; };
 		685D30471C427D6E00C09048 /* Maintain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 685D30461C427D6E00C09048 /* Maintain.storyboard */; };
 		685F73711C33C71900E80F33 /* bottom_button_disable.png in Resources */ = {isa = PBXBuildFile; fileRef = 685F73701C33C71900E80F33 /* bottom_button_disable.png */; };
-		685F73731C33CCFF00E80F33 /* ToolBarHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685F73721C33CCFF00E80F33 /* ToolBarHandler.swift */; };
 		685F73791C33EAEF00E80F33 /* pagesBarbak.png in Resources */ = {isa = PBXBuildFile; fileRef = 685F73781C33EAEF00E80F33 /* pagesBarbak.png */; };
 		685F737B1C33F13800E80F33 /* QueryRecordFilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 685F737A1C33F13800E80F33 /* QueryRecordFilterView.xib */; };
 		685F737D1C33F1F400E80F33 /* QueryRecordFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685F737C1C33F1F400E80F33 /* QueryRecordFilterView.swift */; };
@@ -163,6 +163,7 @@
 		680FB92E1C4641C8008A21C2 /* operation_bt_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = operation_bt_off.png; sourceTree = "<group>"; };
 		680FB9301C46516D008A21C2 /* HYHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYHandler.swift; sourceTree = "<group>"; };
 		680FB9321C4661CF008A21C2 /* QueryManualViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryManualViewController.swift; sourceTree = "<group>"; };
+		68124A591D33D2E600443408 /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		681573791C49139E00EDB98A /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		682005421C4E4D7C00471E56 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		6834E10C1C3FAF7B007B8874 /* ReachabilitySwift-extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReachabilitySwift-extension.swift"; sourceTree = "<group>"; };
@@ -191,7 +192,6 @@
 		685D30441C426FE500C09048 /* UIView-extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView-extension.swift"; sourceTree = "<group>"; };
 		685D30461C427D6E00C09048 /* Maintain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Maintain.storyboard; sourceTree = "<group>"; };
 		685F73701C33C71900E80F33 /* bottom_button_disable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottom_button_disable.png; sourceTree = "<group>"; };
-		685F73721C33CCFF00E80F33 /* ToolBarHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolBarHandler.swift; sourceTree = "<group>"; };
 		685F73781C33EAEF00E80F33 /* pagesBarbak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pagesBarbak.png; sourceTree = "<group>"; };
 		685F737A1C33F13800E80F33 /* QueryRecordFilterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QueryRecordFilterView.xib; sourceTree = "<group>"; };
 		685F737C1C33F1F400E80F33 /* QueryRecordFilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryRecordFilterView.swift; sourceTree = "<group>"; };
@@ -323,14 +323,38 @@
 		680AAA7B1CEB5673003C4514 /* Alert */ = {
 			isa = PBXGroup;
 			children = (
+				682F6E181D152B070030D475 /* Model */,
+				682F6E191D152B110030D475 /* View */,
+				682F6E171D152AE00030D475 /* Controller */,
+			);
+			name = Alert;
+			sourceTree = "<group>";
+		};
+		682F6E171D152AE00030D475 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				680AAA7C1CEB56A5003C4514 /* AlertRecordViewController.swift */,
 				68AE54191CEC838B00526CC3 /* UrgencyAlertViewController.swift */,
 				68A29FEE1D14079D00B9EF81 /* AlertShowViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		682F6E181D152B070030D475 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				68A29FF01D140A3800B9EF81 /* AlertRecord.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		682F6E191D152B110030D475 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				68A29FF61D141FCE00B9EF81 /* AlertRecordCell.xib */,
 				68A29FF81D14200000B9EF81 /* AlertRecordCell.swift */,
 			);
-			name = Alert;
+			name = View;
 			sourceTree = "<group>";
 		};
 		684943D41C30030F00EB5AB7 /* Record */ = {
@@ -613,7 +637,6 @@
 		686EABD51C2BF0B700AB3558 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				685F73721C33CCFF00E80F33 /* ToolBarHandler.swift */,
 				68CDC4D21C3E75DB00B55DFF /* moduleTypeAlias.swift */,
 				680FB9301C46516D008A21C2 /* HYHandler.swift */,
 			);
@@ -646,6 +669,7 @@
 			isa = PBXGroup;
 			children = (
 				689F594E1CEC01F000877322 /* MenuViewController.swift */,
+				68124A591D33D2E600443408 /* SetupViewController.swift */,
 			);
 			name = Menu;
 			sourceTree = "<group>";
@@ -1054,6 +1078,7 @@
 				68624C491C4A82FC00962F46 /* ALImagePickerViewController.swift in Sources */,
 				68EACC3F1CBBCDE800F9A97E /* LBXScanView.swift in Sources */,
 				68AE541A1CEC838B00526CC3 /* UrgencyAlertViewController.swift in Sources */,
+				68124A5A1D33D2E600443408 /* SetupViewController.swift in Sources */,
 				68EACC411CBBCDE800F9A97E /* LBXScanViewStyle.swift in Sources */,
 				689F594F1CEC01F000877322 /* MenuViewController.swift in Sources */,
 				6834E10F1C3FB1D6007B8874 /* HYNetwork.swift in Sources */,
@@ -1086,7 +1111,6 @@
 				68624C431C4A82EC00962F46 /* ALCropOverlay.swift in Sources */,
 				68052BC51C98065600E68799 /* HYDbLocation.swift in Sources */,
 				685BEC591C4104F10072E3C9 /* QueryMaintainInfoViewController.swift in Sources */,
-				685F73731C33CCFF00E80F33 /* ToolBarHandler.swift in Sources */,
 				68D97B561C3D2E0400990AD6 /* KVNProgress-extension.swift in Sources */,
 				68748FF01C3273F20050A1FC /* QueryRecordCell.swift in Sources */,
 				685BEC551C40E02B0072E3C9 /* ElevatorInfo.swift in Sources */,
@@ -1226,13 +1250,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Elevator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.haoyun.PublicElevator;
+				PRODUCT_BUNDLE_IDENTIFIER = com.public.elevator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Elevator/Elevator-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1243,12 +1270,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Elevator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.haoyun.PublicElevator;
+				PRODUCT_BUNDLE_IDENTIFIER = com.public.elevator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Elevator/Elevator-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

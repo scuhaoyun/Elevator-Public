@@ -58,15 +58,8 @@ class UrgencyAlertViewController:UIViewController,HYBottomToolBarButtonClickDele
         if self.picImageView.image != nil {
            alertRecord!.imgName = HYImage.shareInstance.imageToSave(self.picImageView.image!)!
         }
-        let (isSuccess,info) = alertRecord!.submit()
-        if isSuccess {
-            HYProgress.showSuccessWithStatus(info)
-            alertRecord!.insertToDb()
-        }
-        else {
-            HYProgress.showErrorWithStatus(info)
-        }
-        //alertRecord!.insertToDb()
+        alertRecord!.submit()
+                //alertRecord!.insertToDb()
     }
 
 

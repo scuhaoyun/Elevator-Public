@@ -99,7 +99,7 @@ class LBXScanView: UIView
         }
         
         
-        print("LBXScanView deinit")
+        //print("LBXScanView deinit")
     }
     
     
@@ -121,7 +121,7 @@ class LBXScanView: UIView
         {
         case LBXScanViewAnimationStyle.LineMove:
             
-            print(NSStringFromCGRect(cropRect))
+            //print(NSStringFromCGRect(cropRect))
             
             scanLineAnimation!.startAnimatingWithRect(cropRect, parentView: self, image:viewStyle.animationImage )
             break
@@ -206,7 +206,7 @@ class LBXScanView: UIView
         let XRetangleRight = self.frame.size.width - XRetangleLeft
         
         
-        print("frame:%@",NSStringFromCGRect(self.frame))
+        //print("frame:%@",NSStringFromCGRect(self.frame))
         
         let context:CGContext? = UIGraphicsGetCurrentContext()
         

@@ -62,11 +62,11 @@ class HYNetwork: NSObject {
         if #available(iOS 9.0, *) {
            let networks = NEHotspotHelper.supportedNetworkInterfaces()
             for hotspot in networks {
-                print("SSID:" + hotspot.SSID)
-                print("MAC:" + hotspot.BSSID)
-                print((hotspot as! NEHotspotNetwork).secure)
-                print((hotspot as! NEHotspotNetwork).autoJoined)
-                print((hotspot as! NEHotspotNetwork).signalStrength)
+//                print("SSID:" + hotspot.SSID)
+//                print("MAC:" + hotspot.BSSID)
+//                print((hotspot as! NEHotspotNetwork).secure)
+//                print((hotspot as! NEHotspotNetwork).autoJoined)
+//                print((hotspot as! NEHotspotNetwork).signalStrength)
                 if hotspot.SSID == name {
                     return hotspot.BSSID
                 }
@@ -78,8 +78,8 @@ class HYNetwork: NSObject {
                     if let dict = CFBridgingRetain(CNCopyCurrentNetworkInfo(x as! CFString)) {
                         let ssid = dict["SSID"]! as! String
                         let mac  = dict["BSSID"]! as! String
-                        print("SSID:" + ssid)
-                        print("MAC:" + mac)
+//                        print("SSID:" + ssid)
+//                        print("MAC:" + mac)
                         if ssid == name {
                             return mac
                         }

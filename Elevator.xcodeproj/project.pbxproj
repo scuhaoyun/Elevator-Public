@@ -67,6 +67,7 @@
 		68624C541C4A830C00962F46 /* ALCameraShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68624C501C4A830C00962F46 /* ALCameraShot.swift */; };
 		68624C551C4A830C00962F46 /* ALImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68624C511C4A830C00962F46 /* ALImageExtensions.swift */; };
 		68624C571C4A831800962F46 /* ALImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68624C561C4A831800962F46 /* ALImageModel.swift */; };
+		686A84DD1D3629E300D53A27 /* BASE64Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686A84DC1D3629E300D53A27 /* BASE64Encoder.swift */; };
 		686EAB9F1C2BEC0600AB3558 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686EAB9E1C2BEC0600AB3558 /* AppDelegate.swift */; };
 		686EABA61C2BEC0600AB3558 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 686EABA51C2BEC0600AB3558 /* Assets.xcassets */; };
 		686EABA91C2BEC0600AB3558 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686EABA71C2BEC0600AB3558 /* LaunchScreen.storyboard */; };
@@ -211,6 +212,7 @@
 		68624C501C4A830C00962F46 /* ALCameraShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALCameraShot.swift; sourceTree = "<group>"; };
 		68624C511C4A830C00962F46 /* ALImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALImageExtensions.swift; sourceTree = "<group>"; };
 		68624C561C4A831800962F46 /* ALImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALImageModel.swift; sourceTree = "<group>"; };
+		686A84DC1D3629E300D53A27 /* BASE64Encoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BASE64Encoder.swift; sourceTree = "<group>"; };
 		686EAB9B1C2BEC0600AB3558 /* Elevator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elevator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		686EAB9E1C2BEC0600AB3558 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		686EABA51C2BEC0600AB3558 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -646,6 +648,7 @@
 		686EABD61C2BF0BF00AB3558 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				686A84DC1D3629E300D53A27 /* BASE64Encoder.swift */,
 				685D30401C421F7100C09048 /* Constants.swift */,
 				681573791C49139E00EDB98A /* Location.swift */,
 				683B87F41C4B916F00EAC194 /* HYImage.swift */,
@@ -890,7 +893,6 @@
 				TargetAttributes = {
 					686EAB9A1C2BEC0600AB3558 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = K2GP4428WM;
 					};
 					686EABAE1C2BEC0600AB3558 = {
 						CreatedOnToolsVersion = 7.0;
@@ -1085,6 +1087,7 @@
 				685F737D1C33F1F400E80F33 /* QueryRecordFilterView.swift in Sources */,
 				68A29FF11D140A3800B9EF81 /* AlertRecord.swift in Sources */,
 				68EACC3E1CBBCDE800F9A97E /* LBXScanNetAnimation.swift in Sources */,
+				686A84DD1D3629E300D53A27 /* BASE64Encoder.swift in Sources */,
 				68624C4A1C4A82FC00962F46 /* ALImagePickerViewDelegate.swift in Sources */,
 				68624C411C4A82EC00962F46 /* ALPermissionsView.swift in Sources */,
 				683B87F31C4B8B3F00EAC194 /* ALCameraViewController.swift in Sources */,
@@ -1249,14 +1252,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ZhiYanTianXia NetWork Technology Co.Ltd (4QC8WJ8S4B)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ZhiYanTianXia NetWork Technology Co.Ltd (4QC8WJ8S4B)";
 				INFOPLIST_FILE = Elevator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.public.elevator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "5b87a793-020d-4082-9d51-c5fcb84d8586";
 				SWIFT_OBJC_BRIDGING_HEADER = "Elevator/Elevator-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1269,14 +1272,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ZhiYanTianXia NetWork Technology Co.Ltd (4QC8WJ8S4B)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ZhiYanTianXia NetWork Technology Co.Ltd (4QC8WJ8S4B)";
 				INFOPLIST_FILE = Elevator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.public.elevator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "5b87a793-020d-4082-9d51-c5fcb84d8586";
 				SWIFT_OBJC_BRIDGING_HEADER = "Elevator/Elevator-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

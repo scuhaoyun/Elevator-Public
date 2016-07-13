@@ -12,9 +12,11 @@ import ObjectMapper
 class QueryInfoViewController : UIViewController,HYBottomToolBarButtonClickDelegate {
     @IBOutlet weak var bottomToolBar: UIView!
     @IBOutlet weak var twoCodeIdTxt: UILabel!
+    @IBOutlet weak var alertBtn: UIButton!
     var twoCodeId:String?
     var qrcodeTitle:String?
     var elevatorInfo:ElevatorInfo?
+    var isRecord:Bool = false
     /**
     *  View生命周期函数
     */
@@ -25,6 +27,9 @@ class QueryInfoViewController : UIViewController,HYBottomToolBarButtonClickDeleg
     }
     override func viewWillAppear(animated: Bool) {
         self.twoCodeIdTxt.text = self.qrcodeTitle
+        if isRecord {
+            self.alertBtn.enabled = false
+        }
     }
     @IBAction func elevatorInfoBtnClick(sender: UIButton) {
         loadElevatorInfo(URLStrings.queryEleInfoMobile1, segueStr: "elevatorInfo")

@@ -249,6 +249,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="400" height="600"/>
                     <connections>
+                        <outlet property="alertBtn" destination="atG-rR-Vop" id="5Dq-UJ-6mS"/>
                         <outlet property="bottomToolBar" destination="CYX-rK-z1v" id="RHu-Kh-Xck"/>
                         <outlet property="twoCodeIdTxt" destination="SQz-Ef-LDs" id="B82-Fs-Olv"/>
                     </connections>
@@ -387,7 +388,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下次检验日期：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQR-la-onz">
-                                                <rect key="frame" x="10" y="294" width="106" height="21"/>
+                                                <rect key="frame" x="10" y="298" width="106" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="6d2-fJ-6eM"/>
                                                     <constraint firstAttribute="width" constant="106" id="kDq-xk-8ex"/>
@@ -397,7 +398,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="检验人员：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8o-4F-aVe">
-                                                <rect key="frame" x="10" y="261" width="78" height="21"/>
+                                                <rect key="frame" x="10" y="265" width="78" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="78" id="5Gm-rF-Y3X"/>
                                                     <constraint firstAttribute="height" constant="21" id="nLv-6m-BDo"/>
@@ -407,7 +408,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="使用编号：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYR-NU-81q">
-                                                <rect key="frame" x="10" y="229" width="78" height="21"/>
+                                                <rect key="frame" x="10" y="233" width="78" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="14y-PL-tpj"/>
                                                     <constraint firstAttribute="width" constant="78" id="q3G-Ix-EUJ"/>
@@ -417,7 +418,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="检验单位：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEU-6v-fmS">
-                                                <rect key="frame" x="10" y="198" width="78" height="21"/>
+                                                <rect key="frame" x="10" y="202" width="78" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="4cE-wS-sMu"/>
                                                     <constraint firstAttribute="width" constant="78" id="BK3-21-XBg"/>
@@ -426,10 +427,10 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="电梯安装地址：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ku-57-hO2">
-                                                <rect key="frame" x="10" y="169" width="106" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ku-57-hO2">
+                                                <rect key="frame" x="10" y="169" width="50" height="21"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="106" id="EJO-Rc-5mv"/>
+                                                    <constraint firstAttribute="width" constant="50" id="EJO-Rc-5mv"/>
                                                     <constraint firstAttribute="height" constant="21" id="O6h-hP-Iqp"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -469,7 +470,7 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX公司" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xI8-TK-rMD">
-                                                <rect key="frame" x="86" y="198" width="304" height="21"/>
+                                                <rect key="frame" x="86" y="202" width="304" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="91" id="bF1-1C-LT3"/>
                                                     <constraint firstAttribute="height" constant="21" id="kCg-NN-5FL"/>
@@ -485,7 +486,7 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23255664545225" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75c-Fi-Ebk">
-                                                <rect key="frame" x="81" y="229" width="309" height="21"/>
+                                                <rect key="frame" x="81" y="233" width="309" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="KUV-Me-ah2"/>
                                                     <constraint firstAttribute="width" constant="91" id="uj4-jk-gK6"/>
@@ -501,7 +502,7 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="张三" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igg-np-XLZ">
-                                                <rect key="frame" x="86" y="261" width="304" height="21"/>
+                                                <rect key="frame" x="86" y="265" width="304" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="91" id="CYM-1N-Cnb"/>
                                                     <constraint firstAttribute="height" constant="21" id="Czo-Fo-a09"/>
@@ -517,7 +518,7 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016-11-12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKU-K5-who">
-                                                <rect key="frame" x="113" y="294" width="277" height="21"/>
+                                                <rect key="frame" x="113" y="298" width="277" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="MMG-Ag-Hx9"/>
                                                     <constraint firstAttribute="width" constant="91" id="Tjr-0D-nHA"/>
@@ -532,11 +533,12 @@
                                                     </mask>
                                                 </variation>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="四川省成都市武侯区四川大学" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uw2-RK-eVU">
-                                                <rect key="frame" x="113" y="169" width="277" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="四川省成都市武侯区四川大学" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uw2-RK-eVU">
+                                                <rect key="frame" x="57" y="160" width="333" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="91" id="OcD-s5-n91"/>
                                                     <constraint firstAttribute="height" constant="21" id="ZY0-Nh-Snp"/>
+                                                    <constraint firstAttribute="height" constant="40" id="pHA-u1-stm"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -557,7 +559,7 @@
                                             <constraint firstItem="h5K-BY-9Bh" firstAttribute="leading" secondItem="GAS-Ga-FBG" secondAttribute="leading" constant="10" id="69u-b2-5hH"/>
                                             <constraint firstItem="igg-np-XLZ" firstAttribute="leading" secondItem="J8o-4F-aVe" secondAttribute="trailing" constant="-2" id="6KC-cG-5wU"/>
                                             <constraint firstItem="o9Q-Xh-Hqs" firstAttribute="leading" secondItem="cII-iM-5gu" secondAttribute="trailing" constant="-2" id="Ani-9b-JkR"/>
-                                            <constraint firstItem="kEU-6v-fmS" firstAttribute="top" secondItem="3ku-57-hO2" secondAttribute="bottom" constant="8" id="BRd-6D-HcL"/>
+                                            <constraint firstItem="kEU-6v-fmS" firstAttribute="top" secondItem="3ku-57-hO2" secondAttribute="bottom" constant="12" id="BRd-6D-HcL"/>
                                             <constraint firstItem="hKU-K5-who" firstAttribute="leading" secondItem="lQR-la-onz" secondAttribute="trailing" constant="-3" id="BwJ-iy-hYG"/>
                                             <constraint firstItem="igg-np-XLZ" firstAttribute="height" secondItem="J8o-4F-aVe" secondAttribute="height" id="CQ0-Cd-7Pd"/>
                                             <constraint firstItem="o9Q-Xh-Hqs" firstAttribute="trailing" secondItem="Txp-l8-aQC" secondAttribute="trailing" id="Dlt-Lc-Usb"/>
@@ -603,6 +605,7 @@
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="fPl-1W-fkR"/>
+                                                <exclude reference="y5z-QA-oiD"/>
                                             </mask>
                                         </variation>
                                     </view>

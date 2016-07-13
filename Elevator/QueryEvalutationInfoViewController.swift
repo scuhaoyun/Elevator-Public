@@ -37,11 +37,15 @@ class QueryEvalutationInfoViewController: UIViewController,HYBottomToolBarButton
     override func viewDidLoad() {
         super.viewDidLoad()
         loadToolBar()
+        let tapGesture = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        tapGesture.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tapGesture)
+
     }
     @IBAction func submitBtnClick(sender: UIButton) {
         if HYNetwork.isConnectToNetwork(self) {
             HYProgress.showWithStatus("正在提交，请稍等！")
-            Alamofire.request(.GET, URLStrings.remarkAddMobile, parameters: ["twoCodeId":twoCodeId!,"remarkLevel":remarkLevel,"remarkInfo":self.messageTxt.text!])
+            Alamofire.request(.GET, URLStrings.emAlarmMobile3, parameters: ["twoCodeId":twoCodeId!,"remarkLevel":remarkLevel,"remarkInfo":self.messageTxt.text!])
                  .responseJSON { response in
                     HYProgress.dismiss()
                     if response.result.isSuccess {
@@ -123,6 +127,10 @@ class QueryEvalutationInfoViewController: UIViewController,HYBottomToolBarButton
         newToolBar.secondButton.hidden = true
         bottomToolBar.addSubview(newToolBar)
     }
+    func dismissKeyboard(){
+        self.messageTxt.resignFirstResponder()
+    }
+
     
     /**
     *  其他：如扩展等

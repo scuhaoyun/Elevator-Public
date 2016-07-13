@@ -37,33 +37,34 @@ class AlertRecord {
     }
     func submit(){
         if HYNetwork.isConnectToNetwork() {
-            var isSuccess = false
             let image = HYImage.shareInstance.getImageForName(self.imgName)
             let imgStr:String = HYImage.get64encodingStr(image)
             let fileLen = imgStr.characters.count
-            
-            guard imgStr != ""  else {
-                return
-            }
+            var qrcode = QRcode()
+            qrcode.QR6String = self.twoCodeId
             HYProgress.showWithStatus("正在报警，请稍后！")
-            Alamofire.request(.POST, URLStrings.remarkAddMobile, parameters: [
-                "TwoCodeId":self.twoCodeId,
+            Alamofire.request(.POST, URLStrings.emAlarmMobile3, parameters: [
+                "TwoCodeId":qrcode.QR24String,
                 "imgStr":imgStr,
                 "fileLen":fileLen
                 ]).responseString { response in
                     HYProgress.dismiss()
                     if let backStr = response.result.value {
                         if backStr != "" && backStr != "0" {
-                            isSuccess = true
                             self.address = backStr
                             HYProgress.showSuccessWithStatus("报警成功!")
                             self.insertToDb()
                         }
+                        else{
+                            HYProgress.showErrorWithStatus("报警失败!")
+                        }
                     }
+                    else{
+                        HYProgress.showErrorWithStatus("报警失败!")
+                    }
+
             }
-            if !isSuccess {
-                HYProgress.showSuccessWithStatus("报警失败!")
-            }
+
         }
         
     }

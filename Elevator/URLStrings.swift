@@ -17,7 +17,7 @@ struct URLStrings {
     static var queryEleInfoMobile = baseURLString + "queryEleInfoMobile.do"
     static var tcIsValidMobile = baseURLString + "tcIsValidMobile.do"
     static var remarkListMobile = baseURLString + "remarkListMobile.do"
-    static var remarkAddMobile = baseURLString + "remarkAddMobile.do"
+    static var emAlarmMobile3 = baseURLString + "emAlarmMobile3.do"
     static var querymacEleInfoMobile1 = baseURLString + "querymacEleInfoMobile1.do"
     static var querymacEleInfoMobile = baseURLString + "querymacEleInfoMobile.do"
 }

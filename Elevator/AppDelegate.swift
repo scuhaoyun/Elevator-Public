@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Siren
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -18,6 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
         application.applicationSupportsShakeToEdit = true
+        
+        let siren = Siren.sharedInstance
+        siren.alertType = SirenAlertType.Skip
+        Siren.sharedInstance.forceLanguageLocalization = SirenLanguageType.ChineseSimplified
+        siren.appID = "1132202860"
+        siren.checkVersion(.Immediately)
+        
         return true
     }
 
@@ -33,16 +41,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+        Siren.sharedInstance.checkVersion(.Immediately)
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        Siren.sharedInstance.checkVersion(.Daily)
     }
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
+    
 }
+//extension AppDelegate: SirenDelegate
+//{
+//    // Returns a localized message to this delegate method upon performing a successful version check
+//    func sirenDidDetectNewVersionWithoutAlert(message: String) {
+//        print("\(message)")
+//    }
+//}
+
 

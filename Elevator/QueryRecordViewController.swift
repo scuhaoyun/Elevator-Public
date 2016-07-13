@@ -133,6 +133,7 @@ class QueryRecordViewController : UIViewController,HYBottomToolBarButtonClickDel
         let queryViewController = queryStoryBoard.instantiateViewControllerWithIdentifier("QueryInfoViewController") as! QueryInfoViewController
         queryViewController.twoCodeId = (tableView.cellForRowAtIndexPath(indexPath) as! QueryRecordCell).queryRecord?.twoCodeId
         queryViewController.qrcodeTitle = (tableView.cellForRowAtIndexPath(indexPath) as! QueryRecordCell).qrcodeTitleLabel.text
+        queryViewController.isRecord = true
         self.showViewController(queryViewController, sender: self)
     }
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
